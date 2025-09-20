@@ -30,6 +30,12 @@
   - Analytics dashboards tracking tokens, NFTs, cleaned areas, and IoT device usage
   - Blink-style notifications for events and rewards
 
+- **Settings & Preferences**
+  - **Wallet Management:** Connect, switch, or disconnect Solana wallets  
+  - **Notifications:** Enable/disable Blink alerts for scans, rewards, and hardware events  
+  - **Privacy & Location:** Manage GPS tracking for cleaning areas and hotspots  
+  - **Gamification Options:** Toggle leaderboard visibility, streak notifications, and NFT display preferences  
+
 ---
 
 ## 🛠 Tech Stack
@@ -61,7 +67,8 @@
 │   │   ├── AnalyticsDashboard.tsx
 │   │   ├── Leaderboard.tsx
 │   │   ├── CommunityChallenges.tsx
-│   │   └── PlayerProfile.tsx
+│   │   ├── PlayerProfile.tsx
+│   │   └── SettingsPanel.tsx
 │   ├── /contexts
 │   │   ├── WalletContext.tsx
 │   │   ├── BlockchainContext.tsx
@@ -79,7 +86,8 @@
 │   │   ├── Home.tsx
 │   │   ├── Game.tsx
 │   │   ├── Analytics.tsx
-│   │   └── Profile.tsx
+│   │   ├── Profile.tsx
+│   │   └── Settings.tsx
 │   └── /utils
 │       └── api.ts
 ├── package.json
@@ -139,59 +147,36 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 
 ---
 
+## 🛠 Settings Panel
+
+* **Wallet Management:** Connect or switch wallets.
+* **Notifications:** Enable/disable Blink alerts for scans, rewards, and hardware events.
+* **Privacy & Location:** Control GPS sharing and hotspot visibility.
+* **Gamification Preferences:** Toggle leaderboard, streak alerts, and NFT display.
+
+---
+
 ## 📈 Features in Action
 
 1. **Map & Hardware** – View real-time smart bins and IoT hardware activity.
 2. **Scan & Reward** – Scan items, validate, and earn PLY tokens and NFTs.
 3. **Blockchain Tracking** – Monitor rewards using Helius RPC and Solana transactions.
 4. **Analytics** – Track cleaned areas, tokens, NFTs, and device usage.
-5. **Gamification** – Participate in community challenges and leaderboard competitions.
-
----
-
-## 🔧 Development Notes
-
-* **Realtime Updates:** WebSocket connections handle live IoT device data.
-* **Token Rewards:** Backend validates scans and distributes PLY tokens via Solana actions.
-* **NFT Rewards:** Minted dynamically through Metaplex for achievements.
-* **Notifications:** Blink-style alerts for events like scans, rewards, or hardware errors.
+5. **Gamification & Multiplayer** – Participate in challenges and leaderboard competitions.
+6. **Settings** – Customize wallet, notifications, privacy, and gamification preferences.
 
 ---
 
 ## 🚀 Deployment
 
 * **Frontend:** Vercel, Netlify, AWS S3 + CloudFront
-* **Backend:** Node.js server, Docker/Kubernetes ready
+* **Backend:** Node.js, Docker/Kubernetes-ready
 * **Blockchain:** Solana RPC & Helius nodes
 * **IoT:** Helium network or WebSocket integration
-* **Analytics:** Supports large datasets and multi-region deployments
+* **Analytics:** Multi-region support and large datasets
 
 ---
 
 ## 📜 License
 
 MIT License – see [LICENSE](LICENSE) file for details.
-
----
-
-## 📌 Roadmap
-
-* Advanced hardware: AI-assisted hotspot detection, weight sensors, material-specific bins
-* Multi-chain reward support
-* NFT marketplace for environmental achievements
-* Expanded gamification: quests, badges, team competitions
-* AI-powered predictive analytics for cleaning optimization
-
----
-
-## 🌐 Links
-
-* [Project Documentation](#)
-* [Solana Explorer](https://explorer.solana.com)
-* [Metaplex Docs](https://docs.metaplex.com/)
-* [PYTH Price Feeds](https://pyth.network/)
-* [Helium Developer API](https://docs.helium.com/)
-
----
-
-**Polymers** – Gamifying recycling, rewarding sustainability, and connecting communities. ♻️
