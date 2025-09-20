@@ -1,189 +1,152 @@
-# Polymers
+# *Polymers
 
-**Polymers** is a **real-time, gamified recycling platform** that combines:
-
-* IoT-enabled smart hardware and bins
-* Blockchain rewards (**PLY tokens & Metaplex NFTs**)
-* Multiplayer gamification and community challenges
-* Recycled item tracking and analytics
-* **AR Wayfinder** for navigation to bins and hotspots
-* **ESG tracking** for sustainability, social engagement, and governance reporting
+**Polymers** is a **real-time, gamified recycling platform** integrating smart hardware, blockchain rewards, AR navigation, multiplayer challenges, ESG metrics, and analytics. Users earn **PLY tokens** and **NFT milestones** for sustainable actions.
 
 ---
 
-## 🌟 **Features**
+## **Key Features**
 
-### **1. Smart Hardware & IoT**
+### **Smart Hardware & IoT**
 
-* Smart bins with fill sensors, material recognition, and weight detection
-* Scan stations: QR, NFC, barcode
+* Smart bins with fill sensors and material recognition
 * Real-time updates via **Helium LoRaWAN** or WebSockets
-* Maintenance alerts for full or malfunctioning devices
+* Alerts for full or malfunctioning bins
 
-### **2. Recycled Items**
+### **Recycled Items**
 
-* Track each recycled item: type, material, location, timestamp, and reward
-* Earn **PLY tokens** and **NFT milestones**
-* View in dashboards, user profiles, and leaderboards
+* Track items: type, material, location, timestamp, reward
+* Earn **PLY tokens** and milestone **NFTs**
+* Dashboard & leaderboard integration
 
-### **3. Blockchain & Solana Integration**
+### **Blockchain & Solana Integration**
 
-* PLY token rewards on Solana
+* PLY token rewards
 * NFT achievements via **Metaplex**
-* Custom recycling reward programs on Solana
-* Solana Pay integration for instant claiming
-* Helius RPC for real-time transaction and NFT tracking
-* PYTH feeds for dynamic token pricing
+* Solana Pay integration
+* Helius RPC for transaction tracking
+* PYTH feeds for live PLY price
 
-### **4. AR Wayfinder**
+### **AR Wayfinder**
 
-* AR navigation to smart bins, hotspots, and cleaned areas
-* 3D directional arrows or floating markers in camera view
-* Displays distance, bin type, and rewards (PLY tokens, NFTs)
-* Supports **mobile (iOS/Android)** and **web AR**
-* Integrated with Mapbox, IoT bin status, and gamification points
+* AR navigation to bins, hotspots, cleaned areas
+* 3D directional arrows or floating markers
+* Displays distance, bin type, reward info, and ESG impact
+* Works on mobile (iOS/Android) and web AR
 
-### **5. Gamification & Multiplayer**
+### **Gamification & Multiplayer**
 
 * Seasonal and weekly leaderboards
-* Community challenges and collaborative goals
-* Streaks and milestones unlock NFT rewards
+* Community challenges
+* Streaks and milestone rewards
 
-### **6. Maps & Analytics**
+### **Maps & Analytics**
 
-* Mapbox maps with real-time bin status, cleaned areas, and hotspots
+* Mapbox maps with bin status, cleaned areas, and hotspots
 * Heatmaps showing recycling intensity
-* Dashboards track:
+* Dashboards track tokens, NFTs, recycled items, and IoT device usage
 
-  * Tokens earned
-  * NFTs collected
-  * Cleaned areas
-  * Recycled items
-  * IoT device usage
+### **ESG Metrics**
 
-### **7. ESG (Environmental, Social, Governance)**
+* Tracks Environmental, Social, and Governance impact
+* Optional AR overlay shows real-time ESG impact
 
-* Tracks sustainability impact, community engagement, and governance transparency
-* **Environmental:** recycled volume, material types, CO₂/energy saved
-* **Social:** community engagement, challenges completed, NFT milestones
-* **Governance:** PLY token & NFT reward transparency via blockchain
-* ESG scores per user, community, or region
-* Optional AR Wayfinder overlay shows ESG impact for nearby bins
+### **Settings & Preferences**
 
-### **8. Settings & Preferences**
-
-* Wallet management: connect, switch, disconnect
-* Enable/disable Blink notifications
-* Privacy & location controls
-* Gamification options: leaderboard visibility, streak alerts, NFT display
+* Wallet connect, switch, disconnect
+* Notifications, privacy, and gamification options
 
 ---
 
-## 🛠 **Tech Stack**
+## **Architecture**
 
-| Layer      | Technology                                                                  |
-| ---------- | --------------------------------------------------------------------------- |
-| Frontend   | React, React Native, TypeScript, Tailwind CSS, Mapbox, Three.js / ViroReact |
-| Backend    | Node.js / Express, WebSocket / MQTT, REST API                               |
-| Blockchain | Solana, Solana Pay, PLY token program, Metaplex NFT, custom reward programs |
-| Data Feeds | Helius RPC, PYTH price feeds                                                |
-| Database   | PostgreSQL / Supabase                                                       |
-| Analytics  | Recharts, Mapbox heatmaps                                                   |
+### **Frontend**
+
+* **React + React Native + TypeScript + Tailwind CSS**
+* Pages: Home, Game, Analytics, Profile, Settings, RecycledItems, AR Wayfinder, ESG
+* Components: MapboxIoT, HardwareBinCard, ScanReward, SolanaPayButton, NFTRewardCard, BlinkAlert, AnalyticsDashboard, Leaderboard, CommunityChallenges, PlayerProfile, SettingsPanel, RecycledItemCard, RecycledItemsList, RecycledItemsStats, ARWayfinder, ARMarker, PLYTokenActions, MetaplexNFTMint, ESGDashboard, ESGScoreCard
+
+### **Backend**
+
+* Node.js / Express
+* WebSocket / MQTT for real-time IoT updates
+* Reward & analytics engine
+
+### **Lib & Utilities**
+
+* `lib/`: Solana SDK wrappers, Helium IoT connectors, Helius RPC helpers, AR utilities, ESG calculators
+* `hooks/`: useSettings, useSolanaProgram, usePLYToken, useRecycledItemScan, useHeliusTransactions, useARNavigation, useESGMetrics, useIoTDevices, useMapboxIoT
+* `utils/`: distance calculations, timestamp formatting, blockchain helpers, ESG scoring
+* `constants/`: material types, reward thresholds, API endpoints, bin status types
+* `config/`: API URLs, Solana RPC, Wallet & program IDs, Mapbox token, Helium & Helius keys
 
 ---
 
-## ⚡ **Getting Started**
-
-1. **Clone the repository**
+## **Installation**
 
 ```bash
+# Clone repo
 git clone https://github.com/your-org/polymers.git
 cd polymers
-```
 
-2. **Install dependencies**
-
-```bash
+# Install dependencies
 npm install
-# or
-yarn install
+
+# Start development server
+npm run dev
 ```
 
-3. **Set up environment variables**
+---
 
-```bash
-cp .env.example .env
+## **Environment Variables (.env.example)**
+
+```env
+REACT_APP_PLY_TOKEN_PROGRAM_ID=YourPLYTokenProgramID
+REACT_APP_METAPLEX_PROGRAM_ID=YourMetaplexProgramID
+REACT_APP_RECYCLING_REWARD_PROGRAM_ID=YourCustomRewardProgramID
+
+REACT_APP_SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
+REACT_APP_SOLANA_PAY_RECIPIENT=YourWalletAddressHere
+
+REACT_APP_HELIUS_API_KEY=YourHeliusAPIKeyHere
+REACT_APP_PYTH_FEED_ID=YourPythFeedIDHere
+REACT_APP_MAPBOX_ACCESS_TOKEN=YourMapboxAccessTokenHere
+REACT_APP_HELIUM_API_KEY=YourHeliumAPIKeyHere
 ```
 
-Fill in keys for Solana RPC, Metaplex, Helius, Helium, Mapbox, etc.
+---
 
-4. **Run the app**
+## **Usage**
 
-```bash
-npm start
-# or
-yarn start
-```
-
-Open [http://localhost:3000](http://localhost:3000) for web or run the mobile app on iOS/Android.
+* Track recycled items and earn rewards
+* Navigate to bins using **AR Wayfinder**
+* Participate in multiplayer challenges
+* View ESG metrics and analytics dashboards
+* Claim PLY tokens and milestone NFTs
+* Manage wallet, notifications, and privacy settings
 
 ---
 
-## 📌 **AR Wayfinder Flow**
+## **Roadmap**
 
-1. Open AR Wayfinder on mobile or web
-2. Fetch current GPS location
-3. Fetch nearby bins / hotspots via Mapbox + IoT API
-4. Calculate bearing and distance to targets
-5. Render AR markers:
-
-   * Arrow pointing to target bin
-   * Distance in meters
-   * Bin type & reward info (PLY tokens & NFTs)
-   * ESG impact overlay (CO₂ saved, energy saved, recycled volume)
-6. Update dynamically as user moves
-7. Optional gamification overlay: highlight bins with extra rewards or community points
+* AI-assisted recycled item recognition
+* NFT marketplace for milestones
+* Multi-chain reward integration
+* Predictive analytics for recycling hotspots
+* Enhanced AR Wayfinder with path guidance and ESG overlays
+* Expanded `lib` modules for external integrations
 
 ---
 
-## 🚀 **Blockchain Rewards Flow**
+## **Tech Stack**
 
-1. Scan a recycled item
-2. Backend validates the item
-3. PLY tokens credited → NFT minted if milestone reached
-4. AR Wayfinder shows real-time on-chain reward eligibility
-5. Dashboard, leaderboard, ESG metrics, and Blink notifications update
+| Layer       | Technology                                                                  |
+| ----------- | --------------------------------------------------------------------------- |
+| Frontend    | React, React Native, TypeScript, Tailwind CSS, Mapbox, Three.js / ViroReact |
+| Backend     | Node.js / Express, WebSocket / MQTT, REST API                               |
+| Blockchain  | Solana, Solana Pay, PLY token program, Metaplex NFT                         |
+| Data Feeds  | Helius RPC, PYTH price feeds                                                |
+| Database    | PostgreSQL / Supabase                                                       |
+| Analytics   | Recharts, Mapbox heatmaps                                                   |
+| Lib & Utils | Solana SDK wrappers, Helium IoT connectors, AR & ESG helpers                |
 
----
-
-## 📊 **ESG Dashboard Flow**
-
-* Aggregates Environmental, Social, and Governance metrics
-* Environmental: recycled volume, materials, CO₂/energy saved
-* Social: user & community engagement, challenges completed, NFT milestones
-* Governance: token/NFT reward transparency
-* Displays per user, community, or geographic area
-* Integrated with AR Wayfinder for real-time ESG visualization
-
----
-
-## 🗺 **Maps & Analytics**
-
-* Realtime Mapbox maps with:
-
-  * Smart bin locations & fill levels
-  * Cleaned areas & hotspots
-  * ESG impact overlays
-* Dashboards track personal and community metrics:
-
-  * Tokens earned
-  * NFTs minted
-  * Recycled items
-  * IoT sensor data
-  * Leaderboard & gamification stats
-
----
-
-## 📜 **License**
-
-MIT License – see [LICENSE](LICENSE) file for details.
+-
