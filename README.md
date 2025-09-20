@@ -1,10 +1,13 @@
-# Polymers Recycling Platform Monorepo
+# 🌱 Polymers Recycling Platform Monorepo
 
-Polymers is a **real-time, gamified, eco-action platform** with smart hardware, blockchain rewards, AR navigation, multiplayer challenges, ESG metrics, crowdfunding, and analytics dashboards. Users earn **PLY tokens** and milestone NFTs for verified sustainability actions.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE) [![Solana](https://img.shields.io/badge/Blockchain-Solana-blue)](https://solana.com) [![React](https://img.shields.io/badge/Frontend-React-brightgreen)](https://reactjs.org) [![Next.js](https://img.shields.io/badge/Dashboard-Next.js-black)](https://nextjs.org) [![React Native](https://img.shields.io/badge/Mobile-React%20Native-blueviolet)](https://reactnative.dev)
+
+Polymers is a **real-time, gamified, eco-action platform** connecting hardware, blockchain, AR navigation, multiplayer challenges, ESG metrics, crowdfunding, and analytics dashboards.
+Users earn **PLY tokens** and **milestone NFTs** for verified sustainability actions.
 
 ---
 
-## **Monorepo Structure**
+## 🏗 Monorepo Structure
 
 ```
 /polymers
@@ -23,92 +26,86 @@ Polymers is a **real-time, gamified, eco-action platform** with smart hardware, 
 
 ---
 
-## **Key Features**
+## 🌟 Key Features
 
 ### **Eco-Action Tracking**
 
-* **Recycling Submissions**: Submit plastic/metal/paper waste with photo verification
-* **Tree Planting**: GPS-verified tree planting submissions
-* **Solar Energy**: Track solar energy generation & usage
-* **Carbon Footprint**: Calculate CO₂ savings from all eco-actions
+* ♻️ **Recycling Submissions**: Submit waste with photo verification
+* 🌳 **Tree Planting**: GPS-verified tree planting submissions
+* ☀️ **Solar Energy**: Track solar energy generation & usage
+* 🌍 **Carbon Footprint**: Calculate CO₂ savings from eco-actions
 
 ### **Rewards & Tokenomics**
 
-* **PLY Token Rewards**: Earn tokens for verified eco-actions
-* **NFT Milestones**: Unlock exclusive NFTs for sustainability achievements
-* **Leaderboards**: Compete globally and locally with eco-champions
-* **Swap Integration**: Exchange PLY tokens for USDC/SOL
+* 🪙 **PLY Token Rewards**: Earn tokens for verified eco-actions
+* 🎨 **NFT Milestones**: Unlock exclusive NFTs for sustainability achievements
+* 🏆 **Leaderboards**: Compete globally and locally with eco-champions
+* 🔄 **Swap Integration**: Exchange PLY tokens for USDC/SOL
 
 ### **Crowdfunding & Campaigns**
 
-* **Eco-Campaigns**: Create and fund environmental projects
-* **Escrow Smart Contracts**: Secure fund management through Solana Anchor programs
-* **Impact Tracking**: Real-time monitoring of campaign outcomes
-* **Community Governance**: DAO-based voting for platform improvements
+* 📢 **Eco-Campaigns**: Create and fund environmental projects
+* 🔒 **Escrow Smart Contracts**: Secure fund management via Solana Anchor programs
+* 📊 **Impact Tracking**: Real-time monitoring of campaign outcomes
+* 🗳 **Community Governance**: DAO-based voting for platform improvements
 
 ### **Blockchain Integration**
 
-* **Solana Network**: Fast, low-cost transactions for all platform activities
-* **Anchor Programs**: Custom smart contracts for escrow, rewards, and governance
-* **Multi-Wallet Support**: Phantom, Solflare, Backpack integration
-* **Helius RPC**: Real-time blockchain transaction monitoring
-* **PYTH Feeds**: Live PLY token price updates
+* ⚡ **Solana Network**: Fast, low-cost transactions
+* 📜 **Anchor Programs**: Escrow, rewards, and governance smart contracts
+* 💼 **Multi-Wallet Support**: Phantom, Solflare, Backpack integration
+* 🛰 **Helius RPC**: Real-time transaction monitoring
+* 📈 **PYTH Feeds**: Live PLY token price updates
 
 ### **AR Wayfinder**
 
-* Navigate to bins and cleaned areas via AR markers
-* Distance, bin type, reward info, ESG overlay
-* Works on mobile (React Native) and Web (WebXR/Three.js)
+* 🧭 Navigate to bins and cleaned areas via AR markers
+* 📍 Distance, bin type, reward info, ESG overlay
+* Works on **mobile (React Native)** and **web (WebXR/Three.js)**
 
 ### **IoT & Analytics**
 
-* Monitor smart bins via Helium IoT
-* Mapbox heatmaps for recycled items, solar, tree planting
-* Real-time dashboards for ESG metrics and campaign progress
+* 📡 Monitor smart bins via Helium IoT
+* 🗺 Mapbox heatmaps for recycled items, solar, tree planting
+* 📊 Real-time dashboards for ESG metrics and campaign progress
 
 ---
 
-## **Apps Overview**
+## 💻 Apps Overview
 
-### **Web (Vite)**
+| App           | Tech Stack                             | Key Features                                                                                             |
+| ------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Web**       | React + Vite, TypeScript, Tailwind CSS | Home, Game, RecycledItems, ARWayfinder, ESG, Profile, Settings, EcoCampaigns                             |
+| **Dashboard** | Next.js, TypeScript, Tailwind CSS, SSR | AnalyticsDashboard, IoTDeviceMonitor, Leaderboards, ESGMetrics, CommunityChallenges, CampaignsManagement |
+| **Mobile**    | React Native + Expo/CLI, TypeScript    | ARWayfinder, Push notifications, Eco-actions, Rewards                                                    |
 
-* Pages: Home, Game, RecycledItems, ARWayfinder, ESG, Profile, Settings, EcoCampaigns
-* Components: MapboxIoT, HardwareBinCard, RecycledItemCard, ScanReward, PLYTokenActions, SolanaPayButton, MetaplexNFTMint, ARWayfinder, ARMarker, ESGDashboard, ESGScoreCard, CampaignCard
-
-### **Dashboard (Next.js)**
-
-* Pages: AnalyticsDashboard, IoTDeviceMonitor, Leaderboards, ESGMetrics, CommunityChallenges, RecycledItemsStats, CampaignsManagement
-* Components: Heatmaps, ESG Score Cards, Blockchain Activity Panels, CampaignProgressCard
-
-### **Mobile (React Native)**
-
-* Pages/components similar to web
-* ARWayfinder using camera & orientation sensors
-* Push notifications for rewards, bin alerts, challenges
+**Components Highlights**: `MapboxIoT`, `HardwareBinCard`, `RecycledItemCard`, `ScanReward`, `PLYTokenActions`, `SolanaPayButton`, `MetaplexNFTMint`, `ARWayfinder`, `ARMarker`, `ESGDashboard`, `ESGScoreCard`, `CampaignCard`
 
 ---
 
-## **Backend (Node.js / Express)**
+## ⚙ Backend (Node.js / Express)
 
-* REST APIs and WebSocket endpoints
-* Manages eco-actions, recycled items, rewards, NFT minting, ESG metrics
-* Integrates Solana programs, Helius RPC, PYTH feeds, Helium IoT
+* REST APIs & WebSocket endpoints
+* Eco-actions, recycled items, rewards, NFT minting, ESG metrics
+* Solana programs, Helius RPC, PYTH feeds, Helium IoT integration
 * DAO & escrow smart contract management
 * Authentication & role-based access
 
 ---
 
-## **Shared Packages**
+## 📦 Shared Packages
 
-**lib/** – Solana SDK wrappers, IoT connectors, AR utilities, ESG calculators, Eco-action helpers
-**hooks/** – useSettings, useSolanaProgram, usePLYToken, useRecycledItemScan, useHeliusTransactions, useARNavigation, useESGMetrics, useIoTDevices, useMapboxIoT, useEcoCampaigns
-**utils/** – Distance/bearing, timestamps, blockchain helpers, ESG scoring, AR positioning, eco-action helpers
-**constants/** – Material types, reward thresholds, bin & eco-action status, tokenomics constants
-**config/** – API URLs, Solana RPC, Wallet & program IDs, Mapbox, Helium/Helius keys, PYTH feeds
+| Package        | Purpose                                                                                                                                                                                  |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **lib/**       | Solana SDK wrappers, IoT connectors, AR/ESG/Eco-action utilities                                                                                                                         |
+| **hooks/**     | `useSettings`, `useSolanaProgram`, `usePLYToken`, `useRecycledItemScan`, `useHeliusTransactions`, `useARNavigation`, `useESGMetrics`, `useIoTDevices`, `useMapboxIoT`, `useEcoCampaigns` |
+| **utils/**     | Distance/bearing, timestamps, blockchain helpers, ESG scoring, AR positioning, eco-action helpers                                                                                        |
+| **constants/** | Material types, reward thresholds, bin & eco-action status, tokenomics constants                                                                                                         |
+| **config/**    | API URLs, Solana RPC, Wallet & program IDs, Mapbox, Helium/Helius keys, PYTH feeds                                                                                                       |
 
 ---
 
-## **Environment Variables (.env.example)**
+## 🔑 Environment Variables (.env.example)
 
 ```env
 # Solana Programs
@@ -129,13 +126,13 @@ REACT_APP_MAPBOX_ACCESS_TOKEN=YourMapboxAccessTokenHere
 REACT_APP_HELIUM_API_KEY=YourHeliumAPIKeyHere
 
 # PLY Token (mainnet)
-VITE_PUPLIC_MINT=PLYKdaCUgxTUw6rSjWbgSN97Qtecb6Fy6SazWf1tvAC
-NEXT_PUPLIC_MINT=PLYKdaCUgxTUw6rSjWbgSN97Qtecb6Fy6SazWf1tvAC
+VITE_PUBLIC_MINT=PLYKdaCUgxTUw6rSjWbgSN97Qtecb6Fy6SazWf1tvAC
+NEXT_PUBLIC_MINT=PLYKdaCUgxTUw6rSjWbgSN97Qtecb6Fy6SazWf1tvAC
 ```
 
 ---
 
-## **Tech Stack**
+## 🛠 Tech Stack
 
 | Layer      | Technology                                                                  |
 | ---------- | --------------------------------------------------------------------------- |
@@ -151,7 +148,7 @@ NEXT_PUPLIC_MINT=PLYKdaCUgxTUw6rSjWbgSN97Qtecb6Fy6SazWf1tvAC
 
 ---
 
-## **Installation**
+## 🚀 Installation
 
 ```bash
 # Clone repo
@@ -174,7 +171,7 @@ cd packages/backend && npm run dev
 
 ---
 
-## **Roadmap**
+## 📝 Roadmap
 
 * AI-assisted eco-action recognition (image + GPS validation)
 * NFT marketplace for milestone rewards
@@ -182,3 +179,5 @@ cd packages/backend && npm run dev
 * Predictive analytics for recycling & tree planting hotspots
 * Enhanced AR Wayfinder with path guidance & ESG overlays
 * Expanded shared lib/hooks/utils for external integrations
+
+Do you want me to add that diagram?
