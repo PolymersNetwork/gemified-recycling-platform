@@ -1,4 +1,4 @@
-# **Polymers**
+# Polymers
 
 **Polymers** is a **real-time, gamified recycling platform** that combines:
 
@@ -7,6 +7,7 @@
 * Multiplayer gamification and community challenges
 * Recycled item tracking and analytics
 * **AR Wayfinder** for navigation to bins and hotspots
+* **ESG tracking** for sustainability, social engagement, and governance reporting
 
 ---
 
@@ -16,7 +17,7 @@
 
 * Smart bins with fill sensors, material recognition, and weight detection
 * Scan stations: QR, NFC, barcode
-* Real-time updates via Helium LoRaWAN or WebSockets
+* Real-time updates via **Helium LoRaWAN** or WebSockets
 * Maintenance alerts for full or malfunctioning devices
 
 ### **2. Recycled Items**
@@ -36,17 +37,17 @@
 
 ### **4. AR Wayfinder**
 
-* Augmented Reality navigation to smart bins, hotspots, and cleaned areas
-* Displays 3D directional arrows or floating markers
-* Shows distance, bin type, and rewards (PLY tokens, NFTs)
-* Integrated with **Mapbox, IoT bin statuses, and gamification points**
+* AR navigation to smart bins, hotspots, and cleaned areas
+* 3D directional arrows or floating markers in camera view
+* Displays distance, bin type, and rewards (PLY tokens, NFTs)
 * Supports **mobile (iOS/Android)** and **web AR**
+* Integrated with Mapbox, IoT bin status, and gamification points
 
 ### **5. Gamification & Multiplayer**
 
 * Seasonal and weekly leaderboards
 * Community challenges and collaborative goals
-* Streaks and milestones unlock NFTs
+* Streaks and milestones unlock NFT rewards
 
 ### **6. Maps & Analytics**
 
@@ -60,12 +61,21 @@
   * Recycled items
   * IoT device usage
 
-### **7. Settings & Preferences**
+### **7. ESG (Environmental, Social, Governance)**
+
+* Tracks sustainability impact, community engagement, and governance transparency
+* **Environmental:** recycled volume, material types, CO₂/energy saved
+* **Social:** community engagement, challenges completed, NFT milestones
+* **Governance:** PLY token & NFT reward transparency via blockchain
+* ESG scores per user, community, or region
+* Optional AR Wayfinder overlay shows ESG impact for nearby bins
+
+### **8. Settings & Preferences**
 
 * Wallet management: connect, switch, disconnect
 * Enable/disable Blink notifications
 * Privacy & location controls
-* Gamification options (leaderboard, streak alerts, NFT display)
+* Gamification options: leaderboard visibility, streak alerts, NFT display
 
 ---
 
@@ -115,7 +125,7 @@ npm start
 yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) for web or run mobile app on iOS/Android.
+Open [http://localhost:3000](http://localhost:3000) for web or run the mobile app on iOS/Android.
 
 ---
 
@@ -130,6 +140,7 @@ Open [http://localhost:3000](http://localhost:3000) for web or run mobile app on
    * Arrow pointing to target bin
    * Distance in meters
    * Bin type & reward info (PLY tokens & NFTs)
+   * ESG impact overlay (CO₂ saved, energy saved, recycled volume)
 6. Update dynamically as user moves
 7. Optional gamification overlay: highlight bins with extra rewards or community points
 
@@ -138,10 +149,38 @@ Open [http://localhost:3000](http://localhost:3000) for web or run mobile app on
 ## 🚀 **Blockchain Rewards Flow**
 
 1. Scan a recycled item
-2. Backend validates item
+2. Backend validates the item
 3. PLY tokens credited → NFT minted if milestone reached
 4. AR Wayfinder shows real-time on-chain reward eligibility
-5. Dashboard, leaderboard, and Blink notifications update
+5. Dashboard, leaderboard, ESG metrics, and Blink notifications update
+
+---
+
+## 📊 **ESG Dashboard Flow**
+
+* Aggregates Environmental, Social, and Governance metrics
+* Environmental: recycled volume, materials, CO₂/energy saved
+* Social: user & community engagement, challenges completed, NFT milestones
+* Governance: token/NFT reward transparency
+* Displays per user, community, or geographic area
+* Integrated with AR Wayfinder for real-time ESG visualization
+
+---
+
+## 🗺 **Maps & Analytics**
+
+* Realtime Mapbox maps with:
+
+  * Smart bin locations & fill levels
+  * Cleaned areas & hotspots
+  * ESG impact overlays
+* Dashboards track personal and community metrics:
+
+  * Tokens earned
+  * NFTs minted
+  * Recycled items
+  * IoT sensor data
+  * Leaderboard & gamification stats
 
 ---
 
