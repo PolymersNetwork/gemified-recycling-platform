@@ -1,40 +1,45 @@
 # Polymers
 
-**Polymers** is a real-time, gamified recycling platform that integrates **IoT-enabled hardware, blockchain rewards, multiplayer gamification, and advanced analytics dashboards**. Users can earn **PLY tokens** and **Metaplex NFTs** by recycling, scanning, and participating in community challenges.  
+**Polymers** is a real-time, gamified recycling platform that combines **IoT-enabled hardware, blockchain rewards, multiplayer gamification, advanced analytics dashboards, and recycled item tracking**. Users can earn **PLY tokens** and **Metaplex NFTs** for recycling actions.  
 
 ---
 
 ## 🌟 Features
 
-- **Smart Hardware & IoT**
-  - Smart bins with fill sensors, material recognition, and weight detection
-  - Scan stations supporting QR, NFC, and barcode scanning
-  - Real-time IoT updates via Helium LoRaWAN or WebSockets
-  - Maintenance alerts for full or malfunctioning devices
+### **Smart Hardware & IoT**
+- Smart bins with fill sensors, material recognition, and weight detection  
+- Scan stations supporting QR, NFC, and barcode scanning  
+- Real-time updates via Helium LoRaWAN or WebSockets  
+- Maintenance alerts for full or malfunctioning devices  
 
-- **Blockchain & Rewards**
-  - PLY token rewards on Solana
-  - NFT achievements via Metaplex
-  - Solana Pay integration for instant claiming
-  - Helius RPC for real-time transaction & NFT tracking
-  - PYTH feeds for dynamic token valuation
+### **Blockchain & Rewards**
+- PLY token rewards on Solana  
+- NFT achievements via Metaplex  
+- Solana Pay integration for instant claiming  
+- Helius RPC for real-time transaction & NFT tracking  
+- PYTH feeds for dynamic token valuation  
 
-- **Gamification & Multiplayer**
-  - Seasonal and weekly leaderboards
-  - Community challenges and collaborative goals
-  - Streaks and milestones unlock NFT rewards
+### **Gamification & Multiplayer**
+- Seasonal and weekly leaderboards  
+- Community challenges and collaborative goals  
+- Streaks and milestones unlock NFT rewards  
 
-- **Maps & Analytics**
-  - Mapbox integration with real-time bin status
-  - Heatmaps showing cleaned areas and activity hotspots
-  - Analytics dashboards tracking tokens, NFTs, cleaned areas, and IoT device usage
-  - Blink-style notifications for events and rewards
+### **Maps & Analytics**
+- Mapbox integration with real-time bin status  
+- Heatmaps showing cleaned areas and activity hotspots  
+- Analytics dashboards tracking tokens, NFTs, cleaned areas, recycled items, and IoT device usage  
+- Blink-style notifications for events and rewards  
 
-- **Settings & Preferences**
-  - **Wallet Management:** Connect, switch, or disconnect Solana wallets  
-  - **Notifications:** Enable/disable Blink alerts for scans, rewards, and hardware events  
-  - **Privacy & Location:** Manage GPS tracking for cleaning areas and hotspots  
-  - **Gamification Options:** Toggle leaderboard visibility, streak notifications, and NFT display preferences  
+### **Recycled Items**
+- Track every recycled item with type, material, scan location, timestamp, and reward  
+- Items contribute to PLY token rewards and NFT milestones  
+- Display in user profile, dashboards, and leaderboards  
+
+### **Settings & Preferences**
+- Wallet management (connect, switch, disconnect)  
+- Notifications (enable/disable Blink alerts)  
+- Privacy & location controls  
+- Gamification preferences (leaderboard, streak alerts, NFT display)  
 
 ---
 
@@ -51,57 +56,9 @@
 
 ---
 
-## 📁 Project Structure
-
-```
-
-/polymers
-├── /src
-│   ├── /components
-│   │   ├── BlinkAlert.tsx
-│   │   ├── HardwareBinCard.tsx
-│   │   ├── MapboxIoT.tsx
-│   │   ├── NFTRewardCard.tsx
-│   │   ├── ScanReward.tsx
-│   │   ├── SolanaPayButton.tsx
-│   │   ├── AnalyticsDashboard.tsx
-│   │   ├── Leaderboard.tsx
-│   │   ├── CommunityChallenges.tsx
-│   │   ├── PlayerProfile.tsx
-│   │   └── SettingsPanel.tsx
-│   ├── /contexts
-│   │   ├── WalletContext.tsx
-│   │   ├── BlockchainContext.tsx
-│   │   └── IoTContext.tsx
-│   ├── /hooks
-│   │   ├── useIoTDevices.ts
-│   │   ├── useMapboxIoT.ts
-│   │   ├── useScanRewards.ts
-│   │   ├── useSolanaActions.ts
-│   │   ├── useMetaplexNFT.ts
-│   │   ├── useHeliusTxs.ts
-│   │   ├── usePythPrice.ts
-│   │   └── useLeaderboard.ts
-│   ├── /pages
-│   │   ├── Home.tsx
-│   │   ├── Game.tsx
-│   │   ├── Analytics.tsx
-│   │   ├── Profile.tsx
-│   │   └── Settings.tsx
-│   └── /utils
-│       └── api.ts
-├── package.json
-├── tsconfig.json
-├── tailwind.config.ts
-└── README.md
-
-````
-
----
-
 ## ⚡ Getting Started
 
-### 1. Clone the Repository
+### 1. Clone Repository
 ```bash
 git clone https://github.com/your-org/polymers.git
 cd polymers
@@ -111,17 +68,13 @@ cd polymers
 
 ```bash
 npm install
-```
-
-or
-
-```bash
+# or
 yarn install
 ```
 
 ### 3. Setup Environment Variables
 
-Create a `.env` file with the following keys:
+Create a `.env` file:
 
 ```env
 REACT_APP_SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
@@ -131,15 +84,11 @@ REACT_APP_METAPLEX_PROGRAM_ID=your-metaplex-program
 REACT_APP_SOLANA_PAY_RECIPIENT=your-wallet-address
 ```
 
-### 4. Run the App
+### 4. Run App
 
 ```bash
 npm start
-```
-
-or
-
-```bash
+# or
 yarn start
 ```
 
@@ -147,23 +96,15 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 
 ---
 
-## 🛠 Settings Panel
+## 📌 Features in Action
 
-* **Wallet Management:** Connect or switch wallets.
-* **Notifications:** Enable/disable Blink alerts for scans, rewards, and hardware events.
-* **Privacy & Location:** Control GPS sharing and hotspot visibility.
-* **Gamification Preferences:** Toggle leaderboard, streak alerts, and NFT display.
-
----
-
-## 📈 Features in Action
-
-1. **Map & Hardware** – View real-time smart bins and IoT hardware activity.
-2. **Scan & Reward** – Scan items, validate, and earn PLY tokens and NFTs.
-3. **Blockchain Tracking** – Monitor rewards using Helius RPC and Solana transactions.
-4. **Analytics** – Track cleaned areas, tokens, NFTs, and device usage.
-5. **Gamification & Multiplayer** – Participate in challenges and leaderboard competitions.
-6. **Settings** – Customize wallet, notifications, privacy, and gamification preferences.
+1. **Map & Hardware:** Real-time smart bins, hardware stations, and player locations
+2. **Scan & Reward:** Scan items → validate → earn PLY tokens and NFTs
+3. **Recycled Items:** Track every item by type, material, location, timestamp, and reward
+4. **Blockchain Tracking:** Monitor rewards via Helius RPC and Solana
+5. **Analytics:** Cleaned areas, tokens, NFTs, recycled item stats
+6. **Gamification & Multiplayer:** Participate in leaderboards and community challenges
+7. **Settings:** Wallet management, notifications, privacy, and gamification preferences
 
 ---
 
@@ -180,3 +121,4 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 ## 📜 License
 
 MIT License – see [LICENSE](LICENSE) file for details.
+
