@@ -1,3 +1,5 @@
+# **Polymers**
+
 **Polymers** is a **real-time, gamified recycling platform** that combines:
 
 * IoT-enabled smart hardware and bins
@@ -27,10 +29,10 @@
 
 * PLY token rewards on Solana
 * NFT achievements via **Metaplex**
+* Custom recycling reward programs on Solana
 * Solana Pay integration for instant claiming
 * Helius RPC for real-time transaction and NFT tracking
 * PYTH feeds for dynamic token pricing
-* Custom recycling reward programs on Solana
 
 ### **4. AR Wayfinder**
 
@@ -103,7 +105,7 @@ yarn install
 cp .env.example .env
 ```
 
-Fill in your keys: Solana RPC, Metaplex, Helius, Helium, Mapbox, etc.
+Fill in keys for Solana RPC, Metaplex, Helius, Helium, Mapbox, etc.
 
 4. **Run the app**
 
@@ -113,7 +115,7 @@ npm start
 yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) for web or run mobile app on iOS/Android devices.
+Open [http://localhost:3000](http://localhost:3000) for web or run mobile app on iOS/Android.
 
 ---
 
@@ -121,7 +123,7 @@ Open [http://localhost:3000](http://localhost:3000) for web or run mobile app on
 
 1. Open AR Wayfinder on mobile or web
 2. Fetch current GPS location
-3. Fetch nearby bins / hotspots from Mapbox + IoT API
+3. Fetch nearby bins / hotspots via Mapbox + IoT API
 4. Calculate bearing and distance to targets
 5. Render AR markers:
 
