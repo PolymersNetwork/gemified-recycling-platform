@@ -112,10 +112,10 @@ Polymers is a **real-time, gamified, eco-action platform** with smart hardware, 
 
 ```env
 # Solana Programs
-REACT_APP_PLY_TOKEN_PROGRAM_ID=YourPLYTokenProgramID
-REACT_APP_METAPLEX_PROGRAM_ID=YourMetaplexProgramID
-REACT_APP_RECYCLING_REWARD_PROGRAM_ID=YourCustomRewardProgramID
-REACT_APP_ESCROW_PROGRAM_ID=YourEscrowProgramID
+REACT_APP_PLY_TOKEN_PROGRAM_ID=PLYKdaCUgxTUw6rSjWbgSN97Qtecb6Fy6SazWf1tvAC
+REACT_APP_METAPLEX_PROGRAM_ID=MetaplexProgramID
+REACT_APP_RECYCLING_REWARD_PROGRAM_ID=CustomRewardProgramID
+REACT_APP_ESCROW_PROGRAM_ID=EscrowProgramID
 
 # Blockchain & Wallet
 REACT_APP_SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
@@ -127,6 +127,10 @@ REACT_APP_HELIUS_API_KEY=YourHeliusAPIKeyHere
 REACT_APP_PYTH_FEED_ID=YourPythFeedIDHere
 REACT_APP_MAPBOX_ACCESS_TOKEN=YourMapboxAccessTokenHere
 REACT_APP_HELIUM_API_KEY=YourHeliumAPIKeyHere
+
+# PLY Token (mainnet)
+VITE_PUPLIC_MINT=PLYKdaCUgxTUw6rSjWbgSN97Qtecb6Fy6SazWf1tvAC
+NEXT_PUPLIC_MINT=PLYKdaCUgxTUw6rSjWbgSN97Qtecb6Fy6SazWf1tvAC
 ```
 
 ---
