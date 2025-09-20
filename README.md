@@ -179,5 +179,3 @@ cd packages/backend && npm run dev
 * Predictive analytics for recycling & tree planting hotspots
 * Enhanced AR Wayfinder with path guidance & ESG overlays
 * Expanded shared lib/hooks/utils for external integrations
-
-Do you want me to add that diagram?
