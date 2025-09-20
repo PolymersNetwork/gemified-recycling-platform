@@ -1,4 +1,4 @@
-# *Polymers
+# Polymers
 
 **Polymers** is a **real-time, gamified recycling platform** integrating smart hardware, blockchain rewards, AR navigation, multiplayer challenges, ESG metrics, and analytics. Users earn **PLY tokens** and **NFT milestones** for sustainable actions.
 
